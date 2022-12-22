@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import Category from './components/Category';
-import { fetcher } from './fetcher';
+import { getCategories, getProducts } from './fetcher';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {      
-    const responseObject = await fetcher("/categories");
+    const responseObject = await getCategories();
     setCategories(responseObject);
     }
     fetchData();
@@ -18,7 +18,7 @@ function App() {
 
   const handleCategoryClick = id => {
     const fetchData = async () => {      
-      const responseObject = await fetcher("/products?catId=" + id);
+      const responseObject = await getProducts(id);
       setProducts(responseObject);
       }
       fetchData();
@@ -31,7 +31,7 @@ function App() {
   }
 
   const renderProducts = () => {
-    return products.map( p => 
+    return products.data.map( p => 
       <div>{p.title}</div>
     )
   }

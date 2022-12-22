@@ -11,6 +11,14 @@ export const fetcher = async (url) => {
     }
     catch(err){
         responseObject.errorMessage = err.message;
+        return responseObject;
     }
-    return responseObject;
+}
+
+export const getCategories = () => {
+    return fetcher("/categories");
+}
+
+export const getProducts = () => {
+    return fetcher("/products?catId=" + id);
 }
