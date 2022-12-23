@@ -2,9 +2,12 @@
 const base_url = "http://localhost:3001";
 
 export const fetcher = async (url) => {
-    let responseObject = {errorMessage: "", data: []}
+    let responseObject = {errorMessage: "", data: []};
     try{
-        const response = await fetch(base_url + url)
+        const response = await fetch(base_url + url);
+        if(!response.ok){
+            throw new Error(`HTTP Error ${response.status}`)
+        } 
         const responseData = await response.json();
         responseObject.errorMessage = "";
         responseObject.data = responseData;
@@ -19,6 +22,6 @@ export const getCategories = () => {
     return fetcher("/categories");
 }
 
-export const getProducts = () => {
+export const getProducts = id => {
     return fetcher("/products?catId=" + id);
 }
