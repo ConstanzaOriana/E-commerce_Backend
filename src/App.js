@@ -39,17 +39,16 @@ function App() {
 
   return (
     <>
-    <header>Header</header>
+    <header><h1 className='title'>GEEK GAMERS</h1><h2 className='subtitle'>Marketplace</h2></header>
     <section>
       <nav>
       {categories.errorMessage && <div>Error: {categories.errorMessage}</div>}
       {categories.data && renderCategories()}
       </nav>
-      <article>
+      <main>
         {products.errorMessage && <div>Error : {products.errorMessage}</div>}
-        <h1>Products</h1>
         {products && renderProducts()}
-      </article>
+      </main>
     </section>
     <footer>Footer</footer>
     </>

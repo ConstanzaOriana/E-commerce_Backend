@@ -1,0 +1,44 @@
+@font-face {
+    font-family: header;
+    src: url("./Gamer.ttf");
+}
+
+@font-face {
+    font-family: categories;
+    src: url("./Retronoid.ttf");
+}
+
+.title, .subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: header;
+    color: rgb(31, 196, 31);
+    margin: -5px;
+} 
+
+.title{
+    font-weight: 300;
+    font-size: 200px;
+    margin-top: 40px;
+}
+
+.subtitle{
+    font-weight: 100;
+    font-size: 100px;
+}
+
+nav{
+    margin-top: 100px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: yellow;
+    font-family: categories;
+}
+
+nav :hover{
+    cursor: pointer;
+}
+
