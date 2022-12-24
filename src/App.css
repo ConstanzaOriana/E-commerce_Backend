@@ -34,11 +34,29 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: yellow;
     font-family: categories;
 }
 
 nav :hover{
     cursor: pointer;
+}
+
+main{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer{
+    font-family: header;
+    color: rgb(31, 196, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 

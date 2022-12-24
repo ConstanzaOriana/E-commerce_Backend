@@ -50,7 +50,7 @@ function App() {
         {products && renderProducts()}
       </main>
     </section>
-    <footer>Footer</footer>
+    <footer className='footer'>Fictional ecommerce marketplace made with ⚛️</footer>
     </>
   );
 }
