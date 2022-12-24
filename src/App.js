@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from "react";
 import Category from './components/Category';
 import { getCategories, getProducts } from './fetcher';
+import CategoryProduct from './components/category_product';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
 
   const renderProducts = () => {
     return products.data.map( p => 
-      <div>{p.title}</div>
+      <CategoryProduct {...p}>{p.title}</CategoryProduct>
     )
   }
 
