@@ -18,7 +18,7 @@ const CategoryProduct = ({title, image, features, price, stock}) => {
                 <h3 className='article-features'>Features</h3>
                 <ul>
                     {features?.map((f) => {
-                        <li>{f}</li>
+                        return <li>{f}</li>
                     })}
                 </ul>
             </div>
