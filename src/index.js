@@ -2,16 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {BrowserRouter, Routes, Route, Router} from 'react-router-dom';
+import CartContextProvider from './context/cartContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-    <Route path='/' element={<App />}/>
-    </Routes>
-    </BrowserRouter>
+    <CartContextProvider>
+    <App/>
+    </CartContextProvider>
   </React.StrictMode>
 );
 
