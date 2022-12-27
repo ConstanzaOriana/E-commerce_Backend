@@ -7,6 +7,7 @@ import CategoryProduct from './category_product';
 const Category = ({id, title, onCategoryClick}) => {
   const [products, setProducts] = useState({errorMessage: "", data: [],})
   const {categoryId} = useParams();
+  
   useEffect(() => {
     const fetchData = async () => {
         const responseObject = await getProducts(categoryId);

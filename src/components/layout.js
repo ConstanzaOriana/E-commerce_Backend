@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import Search from './search';
 
 const Layout = ({categories}) => {
     const renderCategories = () => {
@@ -10,6 +11,7 @@ const Layout = ({categories}) => {
   return (
     <>
     <header><h1 className='title'>GEEK GAMERS</h1><h2 className='subtitle'>Marketplace</h2></header>
+    <Search/>
     <section>
       <nav>
       {categories.errorMessage && <div>Error: {categories.errorMessage}</div>}
